@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:radial-gradient(yellow,purple,orange,white);
+        }
+        form{
+            border-radius: 75px;
+            border: solid black;
+            width: fit-content;
+            padding: 30px;
+            box-shadow: -20px 20px 30px 40px black; 
+            transition: .4s;
+        }
+        input{
+            transition: .3s;
+        }
+        form:hover{
+            transform: translate(-20px,20px);
+            box-shadow: 40px 20px 30pX  purple;
+        }
+        input:hover{
+            box-shadow: -5px 5px 20px  lightseagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>this is Inserting data</h1>
+        <form  method="POST">
+            {% csrf_token %}
+            {{SFO.as_p}}
+
+            <input type="submit" value="TemplateInsertData">
+        </form>
+    </center>
+</body>
+</html>

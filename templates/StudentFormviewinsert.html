@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:radial-gradient( #87ceeb,#ffffff,lightgreen,#800080);
+        }
+        form{
+            border-radius: 20px;
+            border: solid black;
+            width: fit-content;
+            padding: 30px;
+            box-shadow: -20px 20px 30px 40px black; 
+            transition: .6s;
+        }
+        input{
+            transition: .5s;
+        }
+        form:hover{
+            transform: translate(-20px,20px);
+            box-shadow: 40px 20px 30pX  purple;
+        }
+        input:hover{
+            box-shadow: -5px 5px 20px  lightseagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Here Inserting the data into studentForm by using FormView</h1>
+        <form  method="POST">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <input type="submit" value="StudentFormviewinsert">
+        </form>
+    </center>
+</body>
+</html>
+
+http://127.0.0.1:8000/
